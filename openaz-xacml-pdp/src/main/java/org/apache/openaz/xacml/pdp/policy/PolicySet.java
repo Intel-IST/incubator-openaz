@@ -242,7 +242,6 @@ public class PolicySet extends PolicyDef {
         if (evaluationResultCombined.getDecision() == Decision.DENY
             || evaluationResultCombined.getDecision() == Decision.PERMIT) {
             this.updateResult(evaluationResultCombined, evaluationContext);
-
         }
         if (evaluationContext.isTracing()) {
             evaluationContext.trace(new StdTraceEvent<Result>("Result", this, evaluationResultCombined));
